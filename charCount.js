@@ -1,10 +1,12 @@
 function countLetters (sentence) {
   // empty object
   var characterCount = {};
-  // loopnig through the string to look at each letter
-  for (var i = 0; i < sentence.length; i++) {
+
+  var noSpaces = sentence.split(" ").join().split();
+
+   for (var i = 0; i < noSpaces.length; i++) {
     // creating a variable to store each letter looped through in above loop
-  var character = sentence[i];
+  var character = noSpaces[i];
   // if/else statement saying if var characterCount[character] occurs, then track that it has occured and add 1 each occurence
     if (characterCount[character]) {
       characterCount[character]++;
